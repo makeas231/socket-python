@@ -1,6 +1,6 @@
 import socket
-from typing import Final
 
+from typing import Final
 
 
 HOST: Final = "127.0.0.1" # localhost
@@ -18,15 +18,3 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
       if not data:
         break
       conn.sendall(data)
-
-
-
-
-
-
-# Локальный хост - используется для установления IP соединения.
-# AF_INET - используется для связи испольузя IP(есть и другие средства связи).
-# SOCK_STREAM - транспортный протокол типа TPC
-# SOCK_DGRAM - транспортнйы проток типа UDP 
-# decode - преобразования байтовых выражений в строку
-# encode - преобразование строковых(или других типов данных) в байты
